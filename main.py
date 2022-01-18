@@ -19,6 +19,7 @@ def load_data():
     for row in data:
         # performs create operation in mongo
         Vehicle(**row).save()
+    csvfile.close()
 
 
 if __name__ == '__main__':
