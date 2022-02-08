@@ -1,3 +1,5 @@
+import datetime
+
 from mongoengine import *
 import csv
 
@@ -10,6 +12,20 @@ class Vehicle(Document):
     v5c_date = DateField()
     fuel_type = StringField()
     cyclinder_capacity = IntField()
+
+
+class Ticket(Document):
+    vehicle = ReferenceField(Vehicle, required=True)
+    issued_at = DateTimeField(default=lambda: datetime.datetime.now())
+    duration_hours = IntField()
+    payment_amount = FloatField()
+
+
+class Fine(Document):
+    vehicle = ReferenceField(Vehicle, required=True)
+    ticket = ReferenceField(Ticket, required=False)
+    amount = FloatField(required=True)
+    paid = BooleanField(default=False)
 
 
 def load_data():

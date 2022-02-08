@@ -42,9 +42,9 @@ field_names = [
 
 
 def load_to_csv():
-    csvfile = open('./data.csv', 'w', newline='')
+    csvfile = open('./data.csv', 'a', newline='')
     data = csv.DictWriter(csvfile, fieldnames=field_names)
-    data.writeheader()
+    # data.writeheader()
     for reg in registrations:
         c = get_details(reg)
         if c is None: print(reg, 'is invalid')
