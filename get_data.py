@@ -19,7 +19,7 @@ def get_details(plate: str):
     if not r.ok: return
     j = r.json()
     car = dict()
-    car['license_plate'] = plate
+    car['registration_number'] = plate
     car['brand'] = j['make'].capitalize()
     car['colour'] = j['colour'].capitalize()
     car['manufactured_year'] = j['yearOfManufacture']
@@ -31,18 +31,18 @@ def get_details(plate: str):
 
 
 field_names = [
-  'license_plate',
-  'brand',
-  'colour',
-  'manufactured_year',
-  'v5c_date',
-  'fuel_type',
-  'cyclinder_capacity'
+    'registration_number',
+    'brand',
+    'colour',
+    'manufactured_year',
+    'v5c_date',
+    'fuel_type',
+    'cyclinder_capacity'
 ]
 
 
 def load_to_csv():
-    csvfile = open('./data.csv', 'a', newline='')
+    csvfile = open('./data.csv', 'w', newline='')
     data = csv.DictWriter(csvfile, fieldnames=field_names)
     # data.writeheader()
     for reg in registrations:

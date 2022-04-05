@@ -1,2 +1,6 @@
-vehicle,duration_hours,payment_amount
-reg    ,2             ,3.50
+ticket_id               ,vehicle_registration,issued_at              ,duration_hours,payment_amount
+624c1b1716721300fcf83c2e,EX64 HBL            ,2022-04-05 10:30:56.706,0.50          ,0.8
+624c1b1a16721300fcf83c2f,YN57 NLC            ,2022-04-05 10:30:58.285,1             ,1.5
+624c1b1b16721300fcf83c30,NU61 EDC            ,2022-04-05 10:31:02.184,0.75          ,1
+624c1b1b16721300fcf83c31,WJ64 WZY            ,2022-04-05 10:31:04.873,1             ,1.5
+624c1b4216721300fcf83c33,BJ10 FXG            ,2022-04-05 10:31:08.385,0.50          ,0.8

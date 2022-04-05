@@ -1,2 +1,2 @@
-vehicle,ticket  ,amount,paid
-reg    ,rando id,50    ,False
+fine_id                 ,vehicle_registration,ticket_id               ,amount,paid
+624c1bda16721300fcf83c35,WJ64 WZY            ,624c1b1b16721300fcf83c31,20    ,false
